@@ -1,0 +1,155 @@
+/* 1) まずは変数を :root に定義 */
+:root {
+  --bg: #f5f8f5;
+  /* 薄い生成りグリーン系 背景 */
+  --header-bg: #e6f0e6;
+  /* ヘッダー背景 */
+  --fg: #2e3d2b;
+  /* 落ち着いたダークグリーン */
+  --muted: #5c7153;
+  /* 補助テキスト用 */
+  --brand: #3d8c40;
+  /* メインカラー（ボタン・リンク用） */
+  --brand-accent: #66bb6a;
+  /* アクセントの明るいグリーン */
+  --card: #ffffff;
+  /* カード背景は白ベース */
+  --header-h: 64px;
+  /* ヘッダーの高さ */
+}
+
+body {
+  margin: 0;
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans JP, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='3' fill='%2366bb6a' fill-opacity='0.1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  padding-top: var(--header-h);
+
+}
+
+/* header */
+/* ヘッダーを固定 */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* width:100% と同義 */
+  height: var(--header-h);
+  z-index: 1000;
+  /* 前面に出す */
+  background: var(--header-bg);
+  /* 背景色を付けて下の内容を隠す */
+  border-bottom: 1px solid #d5e2d5;
+  /* 見出し線（既存の指定を維持） */
+  display: flex;
+  /* 高さを揃える用（ラッパにflexでもOK） */
+  align-items: center;
+}
+
+/* 中の横並び（ロゴ左／ナビ右） */
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+/* 3) レイアウト共通 */
+.container {
+  max-width: 1024px;
+  margin: auto;
+  padding: 0 16px;
+}
+
+.section {
+  padding: 32px 0;
+}
+
+.section-title {
+  margin: 0 0 16px;
+  font-size: 20px;
+  color: var(--brand);
+  padding-top: 56px;
+}
+
+/* 4) ヘッダー/ナビ */
+.site-header,
+.site-footer {
+  border-bottom: 1px solid #eee;
+}
+
+.site-footer {
+  border-top: 1px solid #eee;
+  border-bottom: none;
+  padding: 24px 0;
+  margin-top: 48px;
+}
+
+.logo {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--fg);
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans JP, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* --- 農作業日誌アプリ紹介ページ専用 --- */
+
+/* セクションの余白を少し広めに */
+.section {
+  padding: 48px 0;
+}
+
+/* 見出し */
+.section h3 {
+  margin-top: 32px;
+  font-size: 1.25rem;
+  color: var(--brand);
+}
+
+/* 機能リスト */
+.section ul {
+  list-style: disc;
+  padding-left: 20px;
+  line-height: 1.8;
+  color: var(--fg);
+}
+
+/* 画像ギャラリー */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* GitHubボタンを2つ並べる時用 */
+.btn+.btn {
+  margin-left: 8px;
+}
+
+/* 注釈 */
+.note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 12px;
+}

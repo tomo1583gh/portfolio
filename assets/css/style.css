@@ -1,0 +1,273 @@
+/* 1) まずは変数を :root に定義 */
+:root {
+  --bg: #f5f8f5;
+  /* 薄い生成りグリーン系 背景 */
+  --header-bg: #e6f0e6;
+  /* ヘッダー背景 */
+  --fg: #2e3d2b;
+  /* 落ち着いたダークグリーン */
+  --muted: #5c7153;
+  /* 補助テキスト用 */
+  --brand: #3d8c40;
+  /* メインカラー（ボタン・リンク用） */
+  --brand-accent: #66bb6a;
+  /* アクセントの明るいグリーン */
+  --card: #ffffff;
+  /* カード背景は白ベース */
+  --header-h: 64px;
+  /* ヘッダーの高さ */
+}
+
+/* 2) ベース */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans JP, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='3' fill='%2366bb6a' fill-opacity='0.1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  padding-top: var(--header-h);
+}
+
+
+/* 3) レイアウト共通 */
+.container {
+  max-width: 1024px;
+  margin: auto;
+  padding: 0 16px;
+}
+
+.section {
+  padding: 32px 0;
+}
+
+.section-title {
+  margin: 0 0 16px;
+  font-size: 20px;
+  color: var(--brand);
+}
+
+/* ヘッダーを固定 */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* width:100% と同義 */
+  height: var(--header-h);
+  z-index: 1000;
+  /* 前面に出す */
+  background: var(--header-bg);
+  /* 背景色を付けて下の内容を隠す */
+  border-bottom: 1px solid #d5e2d5;
+  /* 見出し線（既存の指定を維持） */
+  display: flex;
+  /* 高さを揃える用（ラッパにflexでもOK） */
+  align-items: center;
+}
+
+/* 中の横並び（ロゴ左／ナビ右） */
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+/* 4) ヘッダー/ナビ */
+.site-header,
+.site-footer {
+  border-bottom: 1px solid #eee;
+}
+
+.site-footer {
+  border-top: 1px solid #eee;
+  border-bottom: none;
+  padding: 24px 0;
+  margin-top: 48px;
+}
+
+.logo {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ナビゲーション */
+.nav {
+  display: flex;
+  gap: 24px;
+  margin-left: auto;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: 500;
+  margin: 0;
+}
+
+.nav a:hover {
+  color: var(--brand);
+}
+
+/* 5) ヒーロー */
+.hero {
+  padding: 56px 0;
+  background-image: url("../img/wood-texture.png");
+  background-size: cover;
+  background-position: center;
+  color: #000;
+}
+
+.hero h2 {
+  font-size: clamp(24px, 4vw, 36px);
+  margin: 0 0 8px;
+}
+
+.sub {
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+}
+
+/* ボタン */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: var(--brand);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: var(--brand-accent);
+}
+
+.btn.btn-secondary {
+  background: #444;
+}
+
+/* 6) グリッド */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+/* 7) カード */
+.card {
+  background: var(--card);
+  border: 1px solid #e0e5e0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(60, 80, 60, 0.1);
+}
+
+.card-thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 12px;
+}
+
+.card-title {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.card-summary {
+  margin: 0 0 8px;
+  color: var(--muted);
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e2f2e2;
+  color: var(--brand);
+}
+
+/* 8) フィルタ/問い合わせ */
+.filter-row {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0 16px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 10px;
+  max-width: 520px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.more {
+  margin-top: 8px;
+}
+
+.link {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--brand-accent);
+}
+
+/* 自己紹介セクション */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  /* スマホで縦並び */
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--brand);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.profile-text {
+  flex: 1;
+  min-width: 240px;
+  font-size: 1rem;
+  line-height: 1.7;
+}

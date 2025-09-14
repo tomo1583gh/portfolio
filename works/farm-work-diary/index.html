@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>農作業日誌アプリ | ポートフォリオ</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo"><a href="../index.html">農作業日誌</a></h1>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h2 class="section-title">農作業日誌アプリ</h2>
+    <p>
+      個人農家向けに開発した作業記録アプリです。作業日誌を登録し、検索やカレンダー表示、CSV出力で
+      活用できるようにしています。認証機能を備えたWebアプリとして、業務効率化を目的に開発しました。
+    </p>
+
+    <h3>主な機能</h3>
+    <ul>
+      <li>ユーザー認証（Laravel Fortify使用）</li>
+      <li>作業日誌の登録・編集・削除</li>
+      <li>キーワード検索・年月絞り込み</li>
+      <li>カレンダー表示</li>
+      <li>CSVエクスポート</li>
+    </ul>
+
+    <h3>画面イメージ</h3>
+    <div class="grid">
+      <img src="./img/farm-work-diary-login.png" alt="ログイン画面">
+      <img src="./img/farm-work-diary-list.png" alt="一覧画面">
+      <img src="./img/farm-work-diary-calendar.png" alt="カレンダー画面">
+      <img src="./img/farm-work-diary-registration.png" alt="登録画面">
+    </div>
+
+    <h3>使用技術</h3>
+    <p>Laravel 8 / PHP / MySQL / Docker / CSS</p>
+
+    <h3>リンク</h3>
+    <p>
+      <a class="btn" href="https://github.com/tomo1583gh/farm-work-diary.git" target="_blank" rel="noopener">
+        GitHubリポジトリを見る
+      </a>
+    </p>
+    <p class="note">
+      ※現在はGitHubにて公開済み。今後、独自ドメイン
+      <strong>agrilinker.site</strong> へ移行予定です。
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 Tomohiro Suzuki</small>
+    </div>
+  </footer>
+</body>
+
+</html>

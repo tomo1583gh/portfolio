@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>実績一覧 | ポートフォリオ</title>
+  <meta name="description" content="Webサイト2件＋Webアプリ1件を中心に、目的・担当範囲・技術を整理して掲載。">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Works</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="works.html">Works</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="container section">
+    <h2 class="section-title">実績（随時追加）</h2>
+    <div class="filter-row">
+      <select id="filter-type">
+        <option value="all">すべて</option>
+        <option value="site">Webサイト</option>
+        <option value="app">Webアプリ</option>
+      </select>
+      <select id="filter-tech">
+        <option value="all">技術（すべて）</option>
+        <option>HTML/CSS</option>
+        
+        <option>PHP</option>
+        <option>Laravel</option>
+        <option>MySQL</option>
+        <option>Docker</option>
+      </select>
+    </div>
+    <div id="works-grid" class="grid"></div>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container"><small>© 2025 Tomohiro Suzuki</small></div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>
