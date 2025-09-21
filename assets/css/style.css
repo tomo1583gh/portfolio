@@ -25,15 +25,20 @@
 
 body {
   margin: 0;
-  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans JP, sans-serif;
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans JP,
+    sans-serif;
   color: var(--fg);
   background: var(--bg);
   background-color: var(--bg);
   background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='3' fill='%2366bb6a' fill-opacity='0.1'/%3E%3C/svg%3E");
   background-repeat: repeat;
   padding-top: var(--header-h);
+  font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
 
 /* 3) レイアウト共通 */
 .container {
@@ -48,8 +53,8 @@ body {
 
 .section-title {
   margin: 0 0 16px;
-  font-size: 20px;
-  color: var(--brand);
+  font-size: 10rem;
+  color: #e6f0e6;
 }
 
 /* ヘッダーを固定 */
@@ -163,9 +168,9 @@ body {
 
 /* 6) グリッド */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 /* 7) カード */
@@ -177,24 +182,39 @@ body {
   box-shadow: 0 2px 6px rgba(60, 80, 60, 0.1);
 }
 
+.card>a {
+  display: flex;
+}
+
+.card:nth-child(2)>a {
+  flex-direction: row-reverse;
+}
+
+.card>a>img {
+  width: 40%;
+}
+
 .card-thumb {
   width: 100%;
-  height: 160px;
   object-fit: cover;
   display: block;
 }
 
 .card-body {
-  padding: 12px;
+  padding: 2rem;
 }
 
 .card-title {
   margin: 0 0 6px;
   font-size: 18px;
+  color: var(--fg);
+
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
 }
 
 .card-summary {
-  margin: 0 0 8px;
+  margin: 0 0 1rem;
   color: var(--muted);
 }
 
@@ -247,6 +267,63 @@ body {
   color: var(--brand-accent);
 }
 
+/* 左カラムのフォームをカード化 */
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.contact-main .contact-form {
+  background: var(--card);
+  border: 1px solid #e0e5e0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(60, 80, 60, 0.08);
+}
+
+/* 右からむ */
+.contact-aside.card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.contact-visual {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+/* 画像下の補足 */
+.contact-meta {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.contact-heading {
+  margin: 0 0 .5rem;
+  font-size: 1.1rem;
+  color: var(--fg);
+}
+
+.trust-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* スマホは縦積み（画像→フォーム） */
+@media (max-width:900px) {
+  .contact-wrap {
+    grid-template-columns: 1fr;
+  }
+  .contact-aside {
+    order: -1;  /* 画像を上に　*/
+  }
+}
+
 /* 自己紹介セクション */
 .profile {
   display: flex;
@@ -270,4 +347,60 @@ body {
   min-width: 240px;
   font-size: 1rem;
   line-height: 1.7;
+}
+
+.profile-bottom {
+  display: flex;
+  align-items: center;     /* 中央に揃える */
+  gap: 2rem;               /* テキストと画像の間隔 */
+  margin-top: 3rem;        /* 上に余白 */
+}
+
+.profile-bottom p {
+  flex: 1;           /* テキストを広く取る */
+  margin: 0;
+  line-height: 1.7;
+}
+
+.profile-bottom .desc {
+  flex: 1;          /* テキスト側を広げる */
+  max-width: 60ch;  /* 1行の読みやすい幅に制限（任意） */
+  text-align: left; /* 祖先の center を打ち消す保険 */
+}
+
+.profile-side-img {
+  width: 20rem;
+  height: 19rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.profile-row {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.profile-title {
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.profile-description {
+  line-height: 1.6;
+}
+
+/* スマホ：縦積み */
+@media (max-width: 768px) {
+  .profile-bottom {
+    flex-direction: column-reverse;
+  }
+
+  .profile-side-img {
+    width: 14rem;
+    align-self: flex-end;
+    /* 右寄せしたい場合は left/right 調整 */
+  }
 }

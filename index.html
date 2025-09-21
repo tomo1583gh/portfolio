@@ -1,17 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ポートフォリオ | Tomo1583</title>
-  <meta name="description" content="Webサイト制作・改修、Webアプリ開発のポートフォリオ。">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="ポートフォリオ | 鈴木智宏">
-  <meta property="og:description" content="Webサイト制作・改修、Webアプリ開発の実績。">
+  <metaS name="description" content="Webサイト制作・改修、Webアプリ開発のポートフォリオ。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ポートフォリオ | 鈴木智宏" />
+  <meta property="og:description" content="Webサイト制作・改修、Webアプリ開発の実績。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet" />
+
   <!-- <meta property="og:image" content="assets/img/ogp.jpg"> -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
@@ -26,68 +29,118 @@
     </div>
   </header>
 
-
   <main>
     <section class="hero container">
-      <h2>丁寧な進行と確かな基礎で、<br>小さな改善から成果へ。</h2>
-      <p class="sub">Webサイト修正・新規LP／WordPress微調整／小規模Webアプリ（PHP/Laravel）</p>
+      <h2>丁寧な進行と確かな基礎で、<br />小さな改善から成果へ。</h2>
+      <p class="sub">
+        Webサイト修正・新規LP／WordPress微調整／小規模Webアプリ（PHP/Laravel）
+      </p>
       <div class="cta-row">
         <a class="btn" href="works.html">実績を見る</a>
         <a class="btn btn-secondary" href="#contact">お問い合わせ</a>
       </div>
     </section>
 
-
     <section class="container section">
       <h3 class="section-title">最新の実績</h3>
       <div id="latest-works" class="grid"></div>
-      <div class="more"><a href="works.html" class="link">すべての実績 →</a></div>
+      <div class="more">
+        <a href="works.html" class="link">すべての実績 →</a>
+      </div>
     </section>
 
     <section id="about" class="container section">
       <h3 class="section-title">About Me</h3>
-      <div class="profile">
-        <img src="assets/img/profile/zigazou.png" alt="プロフィール写真" class="profile-img">
-        <div class="profile-text">
-          <p>
-            初めまして、<strong>Tomo1583</strong>と申します。<br>
-            元農業者として農業の現場経験を活かし「農業 × IT」をテーマに、Webサイト制作やWebアプリ開発を行っています。
-          </p>
-          <p>
-            HTML/CSSによるコーディングから、Laravel/PHPを使ったバックエンド開発まで幅広く対応可能です。
-            丁寧な進行と確かな基礎を大切にし、小さな改善からゼロベースの開発まで柔軟にサポートいたします。<br>
-            小さな改善からゼロからの制作まで、お気軽にご相談ください。
-          </p>
+
+      <div class="profile-text">
+        <div class="profile-row">
+          <img src="https://agrijournal.jp/wp-content/uploads/2019/07/aj_itk20190719_ec.jpg"
+            class="profile-side-img">
+          <div>
+            <h4 class="profile-title">
+              「農業 × IT」
+            </h4>
+            <p class="profile-description">
+              初めまして、Tomo1583と申します。
+              <br />
+              元農業者として農業の現場経験を活かし「農業 × IT」をテーマに、<br />Webサイト制作やWebアプリ開発を行っています。
+            </p>
+          </div>
+        </div>
+
+        <div class="profile-bottom">
+          <div class="desc">
+            <p>
+              HTML/CSSによるコーディングから、<br />
+              Laravel/PHPを使ったバックエンド開発まで幅広く対応可能です。<br />
+              丁寧な進行と確かな基礎を大切にし、<br />
+              小さな改善からゼロベースの開発まで柔軟にサポートいたします。<br />
+              小さな改善からゼロからの制作まで、お気軽にご相談ください。
+            </p>
+          </div>
+
+          <img
+            src="./assets/img/images/doro-n.png"
+            alt="イメージ画像"
+            class="profile-side-img"/>
         </div>
       </div>
     </section>
 
-
     <section id="contact" class="container section">
       <h3 class="section-title">お問い合わせ</h3>
-      <form action="https://formspree.io/f/xdklvnal" method="POST" class="contact-form">
-        <input type="hidden" name="_redirect" value="https://tomo1583.github.io/portfolio/thanks.html"><!-- GitHub Pages公開後実際のURLに置き換え -->
-        <label>お名前<input name="name" required></label>
-        <label>メールアドレス<input type="email" name="email" required></label>
-        <label>ご用件<select name="type">
-            <option>新規制作</option>
-            <option>既存修正</option>
-            <option>見積もり</option>
-          </select></label>
-        <label>内容<textarea name="message" rows="5" required></textarea></label>
-        <button class="btn" type="submit">送信</button>
-      </form>
+
+      <div class="contact-wrap">
+        <!-- 左：フォーム -->
+        <div class="contact-main">
+          <form action="https://formspree.io/f/xdklvnal" method="POST" class="contact-form">
+            <input type="hidden" name="_redirect" value="https://tomo1583.github.io/portfolio/thanks.html" />
+      
+            <label for="contact-name">お名前</label>
+            <input id="contact-name" name="name" autocomplete="name" required />
+      
+            <label for="contact-email">メールアドレス</label>
+            <input id="contact-email" type="email" name="email" autocomplete="email" required />
+      
+            <label for="contact-type">ご用件</label>
+            <select id="contact-type" name="type" required>
+              <option value="" disabled selected>選択してください</option>
+              <option>新規制作</option>
+              <option>既存修正</option>
+              <option>見積もり</option>
+            </select>
+      
+            <label for="contact-message">内容</label>
+            <textarea id="contact-message" name="message" rows="5" required></textarea>
+      
+            <button class="btn" type="submit">送信</button>
+          </form>
+        </div>
+
+        <!-- 右：画像+補足 -->
+        <aside class="contact-aside card">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+            alt="ご相談イメージ（農業×IT）" class="contact-visual" loading="lazy" />
+          <div class="contact-meta">
+            <h3 class="contact-heading">まずはお気軽に</h3>
+            <ul class="trust-list">
+              <li>24時間以内に初回返信</li>
+              <li>要件整理からサポート</li>
+              <li>小さな修正からOK</li>
+            </ul>
+          </div>
+        </aside>
+        </div>
+        
       <p class="note"></p>
     </section>
   </main>
-
 
   <footer class="site-footer">
     <div class="container">
       <small>© 2025 Tomo1583</small>
     </div>
   </footer>
-
 
   <script src="assets/js/main.js" defer></script>
 </body>
