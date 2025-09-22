@@ -1,7 +1,8 @@
 [
   {
     "id": "ichietech-lp",
-    "title": "成果につながる1枚LP ❘ IchieTech",
+    "titleMain": "成果につながる1枚LP",
+    "titleBrand": "IchieTech",
     "type": "site",
     "summary": "スマホ最適・高速表示・簡単更新。構成設計からライティング、画像最適化まで一貫対応。",
     "thumb": "assets/img/thumbs/ichietech-lp.png",
@@ -16,7 +17,8 @@
   },
   {
     "id": "ichiefarm",
-    "title": "旬の恵みを食卓へ | IchieFarm",
+    "titleMain": "旬の恵みを食卓へ",
+    "titleBrand": "IchieFarm",
     "type": "site",
     "summary": "自然と共に育てた野菜を紹介し、収穫体験や購入につなげる農園紹介LPデモ。情緒的な訴求でブランド価値を伝えます。",
     "thumb": "assets/img/thumbs/ichiefarm-lp.png",
@@ -31,7 +33,8 @@
   },
   {
     "id": "farm-work-diary",
-    "title": "農作業日誌アプリ",
+    "titleMain": "農作業日誌アプリ",
+    "titleBrand": "",
     "type": "app",
     "summary": "農作業を記録し、検索・カレンダー・CSV出力で活用できるLaravel製アプリ。認証機能を備えた業務効率化ツール。",
     "thumb": "assets/img/thumbs/farm-work-diary-list.png",

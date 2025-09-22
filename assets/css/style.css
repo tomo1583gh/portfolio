@@ -232,6 +232,16 @@ a {
   color: var(--brand);
 }
 
+.work-title .title-brand {
+  color: var(--brand);
+  font-weight: 800;
+}
+
+.work-title .sep {
+  margin: 0 .25em;
+  opacity: .6;
+}
+
 /* 8) フィルタ/問い合わせ */
 .filter-row {
   display: flex;
